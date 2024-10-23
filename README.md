@@ -1,4 +1,4 @@
-# GUIDE TO SOLVE YOUR PROBLEMS [ru]()
+# GUIDE TO SOLVE YOUR PROBLEMS
 
 ##  Navigation
 
