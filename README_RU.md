@@ -2,12 +2,12 @@
 
 ##  Содержание
 
--   [Предисловие]()
--   [Генерация SSH-ключей]()
--   [Port 22]()
--   [Permission denied]()
--   [Permission denied (publickey)]()
--   [Fatal: Authentification failed]()
+-   [Предисловие](#предисловие)
+-   [Генерация SSH-ключей](#генерация-ssh-ключей)
+-   [Port 22](#port-22)
+-   [Permission denied](#permission-denied)
+-   [Permission denied (publickey)](#permission-denied-publickey)
+-   [Fatal: Authentification failed](#fatal-authentication-failed)
 
 ##  Предисловие
 
