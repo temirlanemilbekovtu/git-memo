@@ -3,6 +3,7 @@
 ##  Navigation
 
 -   [Preface](#preface)
+-   [How to open terminal](#how-to-open-terminal)
 -   [SSH keypair generating](#ssh-keypair-generating)
 -   [Port 22](#port-22)
 -   [Permission denied](#permission-denied)
@@ -14,30 +15,45 @@
 Hello, silly boy/girl. If you're reading this, it means you've encountered issues with Git, and Mr. Migranov has redirected your problem-solving request to this document.  
 Good for you I know how to resolve your problem. First find your issue on the [navigation section](#navigation) and then follow described instructions.
 
+## How to open terminal
+
+### Windows
+
+There is no terminal in Windows, but there is a console. But we will call terminal anyway. In order to open a terminal window in Windows follow the step below:
+
+1.  Press `Win+R`, type `cmd` and press `Enter`.
+
+### Linux
+
+To open a terminal window in a Linux distribution follow the instruction:
+
+1.  Press `Ctrl+Alt+T` or `Shift+Ctrl+T`.
+
+2.  If it doesn't work, then try to find a terminal app via a search engine.
+
+3.  If you don't understand the previous step, or it doesn't work, then use `Ctrl+Alt+F2` (or F3-F6). It will open the console line interface. To get back to GUI use `Ctrl+Alt+F1` (of F7).
+
 ## SSH keypair generating
 
 If you don't have an SSH keypair yet, you need to generate one to authenticate with remote repositories over SSH.
 
 ### Steps to generate an SSH keypair
 
-1.  **Open a terminal**  
-    Start by opening a terminal or command prompt on your computer. Typically, the shortcut to launch a new teminal session is `Ctrl+Alt+T`.
-
-2.  **Generate the SSH keypair**  
-    Run the following command to generate a new SSH keypair:
+1.  **Generate the SSH keypair**  
+    Run the following command in a terminal window to generate a new SSH keypair:
     ``` sh
     ssh-keygen -t rsa -b 4096
     ```
     - `-t rsa` specifies the type of key (RSA).
     - `-b 4096` sets the key length to 4096 bits for better security.
 
-3.  **Choose a location for the key**  
+2.  **Choose a location for the key**  
     You'll be prompted to specify a file to save the key. Press `Enter` to accept the default location (`~/.ssh/id_rsa`).
 
-4.  **Set a passphrase (optional)**  
+3.  **Set a passphrase (optional)**  
     You'll be asked to enter a passphrase for your key. This adds an extra layer of security. You can press `Enter` to skip this, but using a passphrase is recommended.
 
-5.  **Add the SSH key to the agent**  
+4.  **Add the SSH key to the agent**  
     Once your key is generated, add it to your SSH agent:
     ``` sh
     eval "$(ssh-agent -s)"
@@ -45,14 +61,14 @@ If you don't have an SSH keypair yet, you need to generate one to authenticate w
     ```
     Replace `id_rsa` with the name of your private key file, if it's different.
 
-6.  **Add your public key to GitHub**  
+5.  **Add your public key to GitHub**  
     Copy the public key to your clipboard:
     ``` sh
     cat ~/.ssh/id_rsa.pub
     ```
     Then go to GitHub's `Settings` > `SSH and GPG keys`, click `New SSH key`, and paste your key.
 
-7.  **Test your connection**  
+6.  **Test your connection**  
     Verify that everything is working by running:
     ``` sh
     ssh -T git@github.com
