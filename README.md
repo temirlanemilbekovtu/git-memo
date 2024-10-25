@@ -1,5 +1,7 @@
 # GUIDE TO SOLVE YOUR PROBLEMS
 
+[**RUSSIAN VERSION**](README_RU.md)
+
 ##  Navigation
 
 -   [Preface](#preface)
